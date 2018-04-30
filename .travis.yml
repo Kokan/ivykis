@@ -10,7 +10,7 @@ matrix:
 script:
   - autoreconf -i .
   - mkdir build && cd build
-  - ../configure
+  - ../configure CFLAGS="-Wall -Wextra -pedantic"
   - make
   - make check
 
