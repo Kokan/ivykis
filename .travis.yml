@@ -1,0 +1,16 @@
+language: c
+
+compiler:
+  - clang
+  - gcc
+
+matrix:
+
+
+script:
+  - autoreconf -i .
+  - mkdir build && cd build
+  - ../configure
+  - make
+  - make check
+
